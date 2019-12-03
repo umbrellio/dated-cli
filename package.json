@@ -1,0 +1,19 @@
+{
+  "name": "dated",
+  "version": "0.1.0",
+  "description": "Yarn outdated wrapper",
+  "bin": "dated.js",
+  "license": "MIT",
+  "keywords": ["yarn", "outdated", "notification"],
+  "author": {
+    "name": "Bespalov Aleksey",
+    "email": "nulldefiner@gmail.com",
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cli-config": "^0.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  }
+}

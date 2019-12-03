@@ -1,0 +1,13 @@
+{
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "switch-colon-spacing": "off",
+    "no-buffer-constructor": "off",
+    "eqeqeq": ["error", "smart"]
+  }
+}
