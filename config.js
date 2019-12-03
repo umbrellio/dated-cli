@@ -2,9 +2,10 @@ const path = require("path")
 const cliConfig = require("cli-config")
 
 const userConfig = cliConfig.getConfig({
-  dirname: path.resolve(),
+  dirname: __dirname,
   ancestors: true,
   merge: "deep",
+  configFile: ".dated.json"
 })
 
 const defaults = {
@@ -13,7 +14,7 @@ const defaults = {
   channel: null,
   days: 7,
   debug: false,
-  allowFailure: true,
+  allowFailure: false,
   cacheFile: ".dated-cache"
 }
 

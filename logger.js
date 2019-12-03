@@ -1,11 +1,7 @@
-const log = (...args) => console.log(...args)
-
 module.exports = ({ debug }) => {
   return {
-    debug: (...args) => {
-      if (!debug) return
-      log("DEBUG", ...args, "\n")
-    },
-    log,
+    debug: (...args) => debug && console.debug("DEBUG", ...args),
+    error: console.error,
+    log: console.log,
   }
 }

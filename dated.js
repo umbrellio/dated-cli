@@ -15,11 +15,6 @@ const notification = require("./notification")(config)
 const INTERVAL = config.days * 24 * 60 * 60 * 1000 // days to ms
 
 const needSendMessage = () => {
-  if (!hook || !channel) {
-    logger.debug("No hook or channel options")
-    return false
-  }
-
   const previous = cache.getLastMessageTime()
   const now = (new Date()).getTime()
   const needSend = previous + INTERVAL < now
@@ -29,11 +24,12 @@ const needSendMessage = () => {
   return previous + INTERVAL < now
 }
 
-const sendMessage = (...args) => new Promise(resolve => {
+const sendMessage = (...args) => new Promise((resolve, reject) => {
   if (needSendMessage()) {
     notification.send(...args)
       .then(cache.setLastMessageTime(new Date()))
       .then(resolve)
+      .catch(reject)
   } else {
     resolve()
   }
@@ -42,10 +38,17 @@ const sendMessage = (...args) => new Promise(resolve => {
 const outdated = packages.get()
 
 if (outdated.length > 0) {
-  const exitCode = config.allowFailure ? 1 : 0
+  process.exitCode = config.allowFailure ? 0 : 1
   const text = message.build(outdated)
   logger.log(text)
-  sendMessage(text).then(process.exit(exitCode))
+  sendMessage(text)
+    .then(() => {
+      logger.debug("exit with code", process.exitCode)
+    })
+    .catch(e => {
+      logger.error(e)
+      process.exit(1)
+    })
 } else {
   logger.log("All is up to date")
 }
