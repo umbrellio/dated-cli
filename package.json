@@ -5,9 +5,14 @@
   "bin": "dated.js",
   "license": "MIT",
   "keywords": ["yarn", "outdated", "notification"],
+  "homepage": "https://github.com/umbrellio/dated",
   "author": {
     "name": "Bespalov Aleksey",
-    "email": "nulldefiner@gmail.com",
+    "email": "nulldefiner@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umbrellio/dated"
   },
   "dependencies": {
     "axios": "^0.19.0",
