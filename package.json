@@ -1,5 +1,5 @@
 {
-  "name": "dated",
+  "name": "dated-cli",
   "version": "0.1.0",
   "description": "Yarn outdated wrapper",
   "bin": "dated.js",
