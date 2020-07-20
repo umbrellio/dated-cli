@@ -39,9 +39,9 @@ const outdated = packages.get()
 
 if (outdated.length > 0) {
   process.exitCode = config.allowFailure ? 0 : 1
-  const text = message.build(outdated)
-  logger.log(text)
-  sendMessage(text)
+
+  logger.log(outdated)
+  sendMessage(outdated)
     .then(() => {
       logger.debug("exit with code", process.exitCode)
     })

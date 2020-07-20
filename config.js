@@ -15,6 +15,9 @@ const defaults = {
   days: 7,
   debug: false,
   allowFailure: false,
+  versionThreshold: null,
+  ignorePackages: [],
+  importantPackages: [],
   cacheFile: ".dated-cache"
 }
 
