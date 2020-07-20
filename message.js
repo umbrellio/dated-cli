@@ -1,9 +1,12 @@
 module.exports = ({ name }) => {
+  const titlePrefix = "#####"
+
   return {
     build: packages => [
-      name ? `[${name}]` : "",
-      "Following packages are outdated:",
+      name ? `${titlePrefix} [${name}]` : "",
+      "**Following packages are outdated:**",
       ...packages.sort(),
-    ].filter(x => !!x).join("\n")
+    ].filter(x => !!x).join("\n"),
+    projectName: () => name ? `${titlePrefix} [${name}]` : "",
   }
 }
