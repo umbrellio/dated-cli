@@ -1,10 +1,14 @@
 {
   "name": "dated-cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Yarn outdated wrapper",
   "bin": "dated.js",
   "license": "MIT",
-  "keywords": ["yarn", "outdated", "notification"],
+  "keywords": [
+    "yarn",
+    "outdated",
+    "notification"
+  ],
   "homepage": "https://github.com/umbrellio/dated",
   "author": {
     "name": "Bespalov Aleksey",
@@ -15,10 +19,10 @@
     "url": "https://github.com/umbrellio/dated"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "cli-config": "^0.4.2"
   },
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "eslint": "^7.7.0"
   }
 }

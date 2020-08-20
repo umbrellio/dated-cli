@@ -33,3 +33,19 @@ Possible options:
 - `ignorePackages` – packages that will be ignored during check outdated
 - `importantPackages` – packages that will be printed in result message
 - `cacheFile` – cache file path
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/umbrellio/dated-cli.
+
+## License
+
+Released under MIT License.
+
+## Authors
+
+Created by [Aleksei Bespalov](https://github.com/nulldef).
+
+<a href="https://github.com/umbrellio/">
+<img style="float: left;" src="https://umbrellio.github.io/Umbrellio/supported_by_umbrellio.svg" alt="Supported by Umbrellio" width="439" height="72">
+</a>
