@@ -19,7 +19,7 @@
     "url": "https://github.com/umbrellio/dated"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cli-config": "^0.4.2"
   },
   "devDependencies": {
