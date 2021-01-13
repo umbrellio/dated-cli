@@ -1,6 +1,6 @@
 {
   "name": "dated-cli",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Yarn outdated wrapper",
   "bin": "dated.js",
   "license": "MIT",
